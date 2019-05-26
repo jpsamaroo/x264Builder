@@ -16,7 +16,7 @@ sources = [
 script = raw"""
 cd $WORKSPACE/srcdir
 cd x264-snapshot-20180212-2245-stable/
-./configure --prefix=$prefix --host=$target --enable-shared --disable-asm
+./configure --prefix=$prefix --host=$target --enable-shared
 make -j${nproc}
 make install
 
@@ -30,19 +30,19 @@ platforms = [
     #Windows(:x86_64),
 
     # linux
-    Linux(:i686, :glibc),
+    #Linux(:i686, :glibc),
     Linux(:x86_64, :glibc),
-    Linux(:aarch64, :glibc),
-    Linux(:armv7l, :glibc),
-    Linux(:powerpc64le, :glibc),
+    #Linux(:aarch64, :glibc),
+    #Linux(:armv7l, :glibc),
+    #Linux(:powerpc64le, :glibc),
 
     # musl
-    Linux(:i686, :musl),
-    Linux(:x86_64, :musl),
+    #Linux(:i686, :musl),
+    #Linux(:x86_64, :musl),
 
     # The BSD's
-    FreeBSD(:x86_64),
-    MacOS(:x86_64),
+    #FreeBSD(:x86_64),
+    #MacOS(:x86_64),
 ]
 
 # The products that we will ensure are always built
