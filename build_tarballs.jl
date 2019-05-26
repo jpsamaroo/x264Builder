@@ -15,7 +15,7 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir
-cd x264-snapshot-20180212-2245-stable/
+cd x264-snapshot-20190525-2245-stable/
 ./configure --prefix=$prefix --host=$target --enable-shared --disable-cli --disable-asm
 make -j${nproc}
 make install
