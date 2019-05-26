@@ -16,7 +16,7 @@ sources = [
 script = raw"""
 cd $WORKSPACE/srcdir
 cd x264-snapshot-20180212-2245-stable/
-./configure --prefix=$prefix --host=$target --enable-shared --disable-cli --disable-asm
+./configure --prefix=$prefix --host=$target --enable-shared
 make -j${nproc}
 make install
 
@@ -26,8 +26,8 @@ make install
 # platforms are passed in on the command line
 platforms = [
     # Windows
-    Windows(:i686),
-    Windows(:x86_64),
+    #Windows(:i686),
+    #Windows(:x86_64),
 
     # linux
     Linux(:i686, :glibc),
