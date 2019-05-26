@@ -8,7 +8,7 @@ version = v"2019.05.25-pre-noyasm"
 # Collection of sources required to build x264Builder
 sources = [
     "https://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20190525-2245-stable.tar.bz2" =>
-    "fa1069c4a6ec442687e33b118572c9dd893e82ebe2f10bbe21dc51996060a3cc",
+    "638581a18bff8e9375211955422eff145011c8ccfd0994d43bd194cd82984f7a",
 
 ]
 
@@ -26,23 +26,23 @@ make install
 # platforms are passed in on the command line
 platforms = [
     # Windows
-    #Windows(:i686),
-    #Windows(:x86_64),
+    Windows(:i686),
+    Windows(:x86_64),
 
     # linux
-    #Linux(:i686, :glibc),
+    Linux(:i686, :glibc),
     Linux(:x86_64, :glibc),
-    #Linux(:aarch64, :glibc),
-    #Linux(:armv7l, :glibc),
-    #Linux(:powerpc64le, :glibc),
+    Linux(:aarch64, :glibc),
+    Linux(:armv7l, :glibc),
+    Linux(:powerpc64le, :glibc),
 
     # musl
-    #Linux(:i686, :musl),
-    #Linux(:x86_64, :musl),
+    Linux(:i686, :musl),
+    Linux(:x86_64, :musl),
 
     # The BSD's
-    #FreeBSD(:x86_64),
-    #MacOS(:x86_64),
+    FreeBSD(:x86_64),
+    MacOS(:x86_64),
 ]
 
 # The products that we will ensure are always built
